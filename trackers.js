@@ -28,7 +28,6 @@ async function addItem(event) {
 async function deleteTodo(element){
     const deleteItem = element.parentElement;
     deleteItem.remove();
-    console.log(element.id);
     try {
         const response1 = await axios.delete(`https://crudcrud.com/api/3e6fd2eb54bf4df68c795610ee23301e/appointmentdata/${element.id}`)
     } catch (err) {
@@ -64,8 +63,8 @@ async function deleteTodo(element){
 
    else if (saveObj.catagories == "Table3") {
         const table1List = document.createElement("li");
-        const expenseAmount = document.getElementById("expenseAmount").value;
-        const description = document.getElementById("description").value;
+        // const expenseAmount = document.getElementById("expenseAmount").value;
+        // const description = document.getElementById("description").value;
         table1List.innerHTML = `
     <span class="todo-name">${saveObj.expenseAmount}</span>
     <span>${saveObj.description}</span>
