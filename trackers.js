@@ -82,8 +82,6 @@ async function loadFunc() {
         const response1 = await axios.get('https://crudcrud.com/api/3e6fd2eb54bf4df68c795610ee23301e/appointmentdata')
         for (let i = 0; i < response1.data.length; i++) {
             addList(response1.data[i]);
-            console.log(response1.data[i]);
-
         }
     } catch (err) {
         console.log(err);
